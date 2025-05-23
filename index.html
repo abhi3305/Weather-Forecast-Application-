@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather project</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-blue-100 font-[\'Open\ Sans\']">
+    <h1 class="text-white py-4 text-center text-[1.75rem] bg-[#5372F0]">Weather Dashboard</h1>
+    <div class="flex flex-wrap gap-[35px] p-[30px]">
+        <div class="w-full max-w-[550px]">
+            <h3 class="text-lg">Enter a city Name</h3>
+            <input id="cityInput" type="text" placeholder="E.g.m New York, London , Tokyo" class="w-full h-[46px] outline-none px-[15px] mt-[10px] mb-[20px] text-[1.07rem] rounded border border-gray-300" />
+            <button id="searchBtn" class="w-full py-[10px] cursor-pointer outline-none border-none text-white text-[1rem] rounded bg-[#5372F0]">Search</button>
+            <div class="h-px w-full my-[25px] bg-gray-400 flex items-center justify-center relative">
+                <span class="absolute bg-blue-100 text-gray-600 text-[1.18rem] px-[15px]">or</span>
+            </div>
+            <button class="w-full py-[10px] cursor-pointer outline-none border-none text-white text-[1rem] rounded bg-gray-600" id="location-btn">Use Current Location</button>
+        </div>
+        <div class="flex-1">
+            <div class="flex justify-between text-white rounded px-[20px] py-[20px] md:px-[70px] bg-[#5372F0]" id="Current-weather">
+                <div id="details">
+                    <h2 class="text-[1.7rem]">_________ (_______)</h2>
+                    <h4 class="mt-3 text-[1rem] font-medium">Temperature: ____C</h4>
+                    <h4 class="mt-3 text-[1rem] font-medium">wind: ____ M/S</h4>
+                    <h4 class="mt-3 text-[1rem] font-medium">Humidity: ____%</h4>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-[1.5rem] my-[20px]">5-Day Forecast</h2>
+                <!-- Added this UL with id="weather-cards" for JS to insert forecast cards -->
+                <ul id="weather-cards" class="flex flex-wrap gap-[20px]">
+                    <!-- Weather cards will be inserted here dynamically -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
